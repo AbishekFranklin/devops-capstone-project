@@ -1,3 +1,4 @@
+import sys
 from flask import Flask
 from service import config
 from service.common import log_handlers
