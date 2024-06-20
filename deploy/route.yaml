@@ -1,0 +1,33 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  creationTimestamp: "2024-06-20T12:59:49Z"
+  labels:
+    app: accounts
+  name: accounts
+  namespace: sn-labs-abishek6996
+  resourceVersion: "1464878631"
+  uid: a6ae176d-cacd-490e-a669-204e33aa3f59
+spec:
+  host: accounts-sn-labs-abishek6996.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: accounts
+    weight: 100
+  wildcardPolicy: None
+status:
+  ingress:
+  - conditions:
+    - lastTransitionTime: "2024-06-20T12:59:49Z"
+      status: "True"
+      type: Admitted
+    host: accounts-sn-labs-abishek6996.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud
+    routerCanonicalHostname: router-default.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud
+    routerName: default
+    wildcardPolicy: None
